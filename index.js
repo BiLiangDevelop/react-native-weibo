@@ -6,6 +6,7 @@ import {NativeModules, NativeAppEventEmitter} from 'react-native';
 import promisify from 'es6-promisify';
 
 const {WeiboAPI} = NativeModules;
+export const isWeiboInstailled = WeiboAPI.isWeiboInstailled
 
 // Used only with promisify. Transform callback to promise result.
 function translateError(err, result) {
@@ -87,4 +88,3 @@ export function share(data) {
     checkData(data)
     return Promise.all([waitForResponse('WBSendMessageToWeiboResponse'), nativeSendMessageRequest(data)]).then(v=>v[0]);
 }
-
