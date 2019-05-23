@@ -23,5 +23,7 @@ android {
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
-    compile files('libs/weiboSDKCore_3.1.2.jar')
+//    compile files('libs/weiboSDKCore_3.1.2.jar')
+    compile files('libs/weiboSDKCore.jar')
+    compile files('libs/umeng-share-sina-full-6.9.4.jar')
 }
