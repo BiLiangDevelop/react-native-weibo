@@ -107,7 +107,8 @@ public class WeiboModule extends ReactContextBaseJavaModule implements ActivityE
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        mWBAPI.authorizeCallback(requestCode, resultCode, data);
+        if (mWBAPI != null)
+            mWBAPI.authorizeCallback(requestCode, resultCode, data);
     }
 
     public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
